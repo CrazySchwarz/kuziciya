@@ -1,6 +1,6 @@
 .screenbottomformobile {
     position: fixed;
-    bottom: 0;
+    bottom: 5px;
     width: 100%;
     height: 75px;
     left: 0;
@@ -44,10 +44,11 @@
 .screenbottomformobile .navbtn:focus::after {
     content: "";
     position: absolute;
-    bottom: 0; /* en alta */
+    bottom: 5px; /* en alta */
     left: 0;
     right: 0;
-    height: 3px;
+    height: 5px;
+    bottom: 0px;
     background: dodgerblue;
     border-radius: 2px;
 }
