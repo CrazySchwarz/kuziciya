@@ -4,10 +4,9 @@
     left: 0;
     right: 0;
 
-    /* iOS Safe Area desteği */
-    padding-bottom: env(safe-area-inset-bottom);
-    /* bazı cihazlar eski spec kullanıyor diye fallback */
-    padding-bottom: constant(safe-area-inset-bottom);
+    /* iOS Safe Area desteği (önce eski spec, sonra yeni spec) */
+    padding-bottom: constant(safe-area-inset-bottom); /* eski iOS */
+    padding-bottom: env(safe-area-inset-bottom);      /* modern iOS */
 
     width: 100%;
     height: 75px;
@@ -15,11 +14,15 @@
     border-top: rgba(211, 211, 211, 0.164) 2px solid;
 
     display: flex;
-    justify-content: space-between; /* 3 bölme */
+    justify-content: space-between; 
     align-items: center;
     padding-left: 0;
     padding-right: 0;
-    box-sizing: border-box; /* padding eklenince taşmayı engelle */
+    box-sizing: border-box;
+
+    -webkit-touch-callout: none;       /* iOS uzun basma menüsü engelle */
+    -webkit-user-select: none;         /* metin seçimini kapat */
+    -webkit-tap-highlight-color: transparent; /* gri highlight kaldır */
 }
 
 /* Butonları %33.33 yap */
@@ -28,32 +31,34 @@
     height: 100%;
     background: none;
     border: none;
-    color: #aaa; /* normal gri */
+    color: #aaa;
     font-size: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: color 0.2s ease, background 0.2s ease;
-    position: relative; /* border-top için */
+    position: relative;
+
+    -webkit-appearance: none; /* Safari default stilini sıfırla */
 }
 
-/* Hover efekti */
+/* Hover efekti (iOS’ta çalışmaz ama desktop için bırak) */
 .screenbottomformobile .navbtn:hover {
     background: rgba(255, 255, 255, 0.05);
     color: #fff;
 }
 
-/* Focus → aktif görünüm (ikon mavi + üst çizgi mavi) */
+/* Aktif görünüm (focus yerine daha stabil) */
 .screenbottomformobile .navbtn:focus {
-    color: dodgerblue; /* ikon mavi */
+    color: dodgerblue;
     outline: none;
 }
 
 .screenbottomformobile .navbtn:focus::after {
     content: "";
     position: absolute;
-    top: 0; /* en üste */
+    top: 0;
     left: 0;
     right: 0;
     height: 5px;
@@ -61,33 +66,21 @@
     border-radius: 2px;
 }
 
-/* Aktif basılı tutma efekti (kısa süreli) */
+/* Basılı tutma efekti */
 .screenbottomformobile .navbtn:active {
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* Ekran genişliği 1305px ve üstü için gizle */
+/* Masaüstünde gizle */
 @media screen and (min-width: 1305px) {
     .screenbottomformobile {
         display: none;
     }
 }
 
-/* Ekran <1305px için görünür */
+/* Mobilde göster */
 @media screen and (max-width: 1304px) {
     .screenbottomformobile {
         display: flex;
     }
-}
-
-input, textarea, select {
-  -webkit-appearance: none;  /* Safari'nin kendi stilini kapatır */
-  outline: none;             /* Mavi highlight'ı kapatır */
-  border: none;              /* Default border'ı sıfırlar */
-  border-top: 2px solid #007aff; /* iPhone'un mavi rengine benzer */
-}
-
-input:focus, textarea:focus, select:focus {
-  border-top: 2px solid #007aff; /* Basıldığında mavi çizgi */
-  box-shadow: none;              /* Safari'nin gölgesini kaldırır */
 }
