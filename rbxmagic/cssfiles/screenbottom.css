@@ -26,7 +26,7 @@
     justify-content: center;
     cursor: pointer;
     transition: color 0.2s ease, background 0.2s ease;
-    position: relative; /* border-bottom için */
+    position: relative; /* border-top için */
 }
 
 /* Hover efekti */
@@ -35,7 +35,7 @@
     color: #fff;
 }
 
-/* Focus → aktif görünüm (ikon mavi + alt çizgi mavi) */
+/* Focus → aktif görünüm (ikon mavi + üst çizgi mavi) */
 .screenbottomformobile .navbtn:focus {
     color: dodgerblue; /* ikon mavi */
     outline: none;
@@ -44,11 +44,10 @@
 .screenbottomformobile .navbtn:focus::after {
     content: "";
     position: absolute;
-    bottom: 5px; /* en alta */
+    top: 0; /* en üste */
     left: 0;
     right: 0;
     height: 5px;
-    bottom: 0px;
     background: dodgerblue;
     border-radius: 2px;
 }
