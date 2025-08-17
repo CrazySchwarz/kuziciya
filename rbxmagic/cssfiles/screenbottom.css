@@ -4,28 +4,25 @@
     left: 0;
     right: 0;
 
-    /* iOS Safe Area desteği (önce eski spec, sonra yeni spec) */
-    padding-bottom: constant(safe-area-inset-bottom); /* eski iOS */
-    padding-bottom: env(safe-area-inset-bottom);      /* modern iOS */
+    /* iOS Safe Area desteği */
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
 
     width: 100%;
     height: 75px;
     background-color: #171921;
-    border-top: rgba(211, 211, 211, 0.164) 2px solid;
-
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     padding-left: 0;
     padding-right: 0;
     box-sizing: border-box;
 
-    -webkit-touch-callout: none;       /* iOS uzun basma menüsü engelle */
-    -webkit-user-select: none;         /* metin seçimini kapat */
-    -webkit-tap-highlight-color: transparent; /* gri highlight kaldır */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
-/* Butonları %33.33 yap */
 .screenbottomformobile .navbtn {
     width: 33.33%;
     height: 100%;
@@ -37,38 +34,31 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: color 0.2s ease, background 0.2s ease;
     position: relative;
-
-    -webkit-appearance: none; /* Safari default stilini sıfırla */
+    transition: color 0.2s ease, background 0.2s ease;
+    -webkit-appearance: none;
 }
 
-/* Hover efekti (iOS’ta çalışmaz ama desktop için bırak) */
 .screenbottomformobile .navbtn:hover {
     background: rgba(255, 255, 255, 0.05);
     color: #fff;
 }
 
-/* Aktif görünüm (focus yerine daha stabil) */
-.screenbottomformobile .navbtn:focus {
-    color: dodgerblue;
-    outline: none;
+.screenbottomformobile .navbtn:active {
+    background: rgba(255, 255, 255, 0.1);
 }
 
-.screenbottomformobile .navbtn:focus::after {
-    content: "";
+/* Indicator (üst mavi çizgi) */
+.screenbottomformobile .indicator {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
+    width: 33.33%;
     height: 5px;
     background: dodgerblue;
     border-radius: 2px;
-}
-
-/* Basılı tutma efekti */
-.screenbottomformobile .navbtn:active {
-    background: rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+    z-index: 10;
 }
 
 /* Masaüstünde gizle */

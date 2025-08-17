@@ -1,19 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll('.screenbottomformobile .navbtn');
+  const indicator = document.querySelector('.screenbottomformobile .indicator');
 
-  buttons.forEach(btn => {
+  // İlk butonu default aktif yap
+  buttons[0].style.color = "dodgerblue";
+  indicator.style.transform = `translateX(0%)`;
+
+  buttons.forEach((btn, index) => {
     btn.addEventListener('click', () => {
-      // tüm butonlardan "active" kaldır
-      buttons.forEach(b => {
-        b.style.color = "#aaa"; // griye dön
-        b.style.setProperty("--active-line", ""); // üst çizgi sil
-      });
+      // Tüm butonları gri yap
+      buttons.forEach(b => b.style.color = "#aaa");
 
-      // tıklanan butona aktiflik ver
+      // Tıklanan butonu mavi yap
       btn.style.color = "dodgerblue";
 
-      // üst mavi çizgi ekle
-      btn.style.setProperty("--active-line", "show");
+      // Indicator'u kaydır
+      indicator.style.transform = `translateX(${index * 100}%)`;
     });
   });
 });
