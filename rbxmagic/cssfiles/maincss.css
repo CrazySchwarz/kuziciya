@@ -1,0 +1,210 @@
+@font-face {
+  font-family: "Nunito";
+  src: url("fonts/Nunito-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("fonts/Nunito-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("fonts/Nunito-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("fonts/Nunito-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("fonts/Nunito-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+
+body {
+    background-color: #151719;
+    margin: 0;
+    padding: 0px;
+}
+
+.logo {
+    height: 62.5px;
+    position: fixed;
+    top: 4px;
+    left: 12px;
+}
+
+.header {
+    background-color: #1a1d21;
+    padding: 7.5px 5px;
+    display: flex;
+    align-items: center;
+    height: 82px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    height: 65px;
+    border-bottom: #ffffff17 1px solid;
+    display: flex;
+}
+
+.register {
+    position: fixed;
+    right: 20px;
+    border: rgba(255, 255, 255, 0.212) 2px solid;
+    border-radius: 4.5px;
+    padding: 10px 15px;
+    background-color: rgb(33, 130, 209);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 17.5px;
+    cursor: pointer;
+    font-family: "Nunito", sans-serif;
+    transition: all 0.25s ease; /* hover geçişi yumuşak olsun */
+}
+
+.login {
+    position: fixed;
+    right: 130px;
+    border: rgba(255, 255, 255, 0) 1px solid;
+    border-radius: 4.5px;
+    padding: 10px 15px;
+    background-color: #1a1d21;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 17.5px;
+    cursor: pointer;
+    font-family: "Nunito", sans-serif;
+    transition: all 0.5s ease; /* hover geçişi yumuşak olsun */
+}
+
+.login:hover {
+    border: rgba(255, 255, 255, 0.212) 1px solid;
+}
+
+.register:hover {
+    background-color: rgba(33, 130, 209, 0.8);
+    border: rgba(255, 255, 255, 0.103) 2px solid;
+}
+
+
+.statsmenu {
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    top: calc(50px + 115px + 15px);
+    background: #1e2029;
+    border: 3px solid rgba(64, 68, 71, 0.411);
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 0px;
+    min-height: 90px;
+    overflow: hidden; /* fade efekt taşmasın */
+    z-index: 2;
+}
+
+/* Ortadan bölme çizgisi */
+.statsmenu::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 50%;
+    width: 1px;
+    background: rgba(120, 120, 120, 0.3);
+    z-index: 2;
+}
+
+/* Fade efektler */
+.statbox {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    z-index: 2;
+}
+
+.statbox:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at left bottom, rgba(0, 255, 157, 0.25), transparent 85%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.statbox:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at right bottom, rgba(0, 200, 255, 0.25), transparent 85%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.stat-title, .stat-value {
+    position: relative;
+    z-index: 2; /* efektlerin üstünde kalsın */
+}
+
+.stat-title {
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: lightgray;
+    margin: 0;
+    margin-bottom: 8px; 
+    z-index: 2;
+}
+
+.stat-value {
+    font-family: "Nunito", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: rgb(0, 255, 157);
+    margin: 0;
+    z-index: 2;
+}
+
+.totalgames {
+    font-family: "Nunito", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: rgb(0, 200, 255);
+    margin: 0;
+}
+.stat-value span {
+    color: #ffffff; /* değerler beyaz olsun */
+}
+
+.topo {
+  position: absolute;
+  top: 0px;
+  height: 500px;
+  width: 100%;
+  left: 0px;
+  z-index: -1;
+  opacity: 0.75;
+}

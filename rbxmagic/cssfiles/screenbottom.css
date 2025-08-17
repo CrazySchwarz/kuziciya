@@ -1,0 +1,72 @@
+.screenbottomformobile {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+    left: 0;
+    right: 0;
+    background-color: #171921;
+    border-top: rgba(211, 211, 211, 0.164) 2px solid;
+    display: flex;
+    justify-content: space-between; /* 3 bölme */
+    align-items: center;
+    padding: 0;
+}
+
+/* Butonları %33.33 yap */
+.screenbottomformobile .navbtn {
+    width: 33.33%;
+    height: 100%;
+    background: none;
+    border: none;
+    color: #aaa; /* normal gri */
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: color 0.2s ease, background 0.2s ease;
+    position: relative; /* border-bottom için */
+}
+
+/* Hover efekti */
+.screenbottomformobile .navbtn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+}
+
+/* Focus → aktif görünüm (ikon mavi + alt çizgi mavi) */
+.screenbottomformobile .navbtn:focus {
+    color: dodgerblue; /* ikon mavi */
+    outline: none;
+}
+
+.screenbottomformobile .navbtn:focus::after {
+    content: "";
+    position: absolute;
+    bottom: 0; /* en alta */
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: dodgerblue;
+    border-radius: 2px;
+}
+
+/* Aktif basılı tutma efekti (kısa süreli) */
+.screenbottomformobile .navbtn:active {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Ekran genişliği 1305px ve üstü için gizle */
+@media screen and (min-width: 1305px) {
+    .screenbottomformobile {
+        display: none;
+    }
+}
+
+/* Ekran <1305px için görünür */
+@media screen and (max-width: 1304px) {
+    .screenbottomformobile {
+        display: flex;
+    }
+}

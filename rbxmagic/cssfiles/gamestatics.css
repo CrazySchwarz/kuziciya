@@ -1,0 +1,42 @@
+.gamestaics {
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    top: 165px;
+    background: #1e2029; /* soft gradient yeşil tonları */
+    padding: 2px 20px; /* üst-alt ve sağ-sol padding */
+    border-radius: 4px; /* daha yuvarlatılmış köşeler */
+    border: 0px solid rgb(33, 130, 209); /* koyu yeşil border */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 75px; /* yeterli yükseklik */
+}
+
+.totalvalue {
+    position: absolute;
+    height: 100px;
+    left: 15px;
+    color: white;
+}
+
+.totalvaluetext {
+    position: relative;
+    font-size: x-large;
+    font-family: "Nunito", sans-serif;
+}
+
+.totalvaluetexttwo {
+    position: relative;
+    font-size: x-large;
+    font-family: "Nunito", sans-serif;
+}
+
+.splitter {
+    position: absolute;
+    background-color: #151719;
+    height: 115px;
+    width: 175px;
+    left: 50%;
+}
+

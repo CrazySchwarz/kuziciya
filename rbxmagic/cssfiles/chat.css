@@ -1,0 +1,52 @@
+.chat {
+    width: 100%;
+    top: 65px;
+    height: 100%;
+    width: 325px;
+    left: 0px;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    position: fixed;
+    background-color: #1a1d20;
+    border-right: #ffffff17 0.5px solid;
+}
+
+.mainchat {
+    position: absolute;
+    color: white;
+    background-color: #1b1d26;
+    border: rgba(255, 255, 255, 0.144) 0.5px solid;
+    top: 30px;
+    width: calc(100% - 24px);
+    left: 12px;
+    height: 65px;
+    border-radius: 4px;
+    display: flex;
+}
+
+.mainchattext {
+    position: fixed;
+    left: 25px;
+    color: gray;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
+    font-size: large;
+    top: 90px;
+}
+
+.mainchatimage {
+    position: fixed;
+    height: 15px;
+    top: 135px;
+    left: 25px;
+}
+
+.onlinecount {
+    position: fixed;
+    top: 120px;
+    left: 50px;
+    color: rgb(70, 133, 184);
+    font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
+    font-size: large;
+}

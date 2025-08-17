@@ -1,0 +1,53 @@
+.container {
+    width: calc(100% - 327.5px); /* ekran genişliği - sidebar */
+    box-sizing: border-box;
+    border: #fff 0px solid;
+    top: 65.5px;
+    position: relative;
+    left: 327.5px;
+    height: 1500px;
+}
+
+.entercontent {
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    top: 50px;
+    background: linear-gradient(135deg, rgba(33, 130, 209, 0.356), rgba(33, 130, 209, 0.233)); /* soft gradient yeşil tonları */
+    padding: 2px 20px; /* üst-alt ve sağ-sol padding */
+    border-radius: 12px; /* daha yuvarlatılmış köşeler */
+    border: 2px solid rgb(33, 130, 209); /* koyu yeşil border */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100px; /* yeterli yükseklik */
+}
+
+.entercontenttext {
+    color: #ffffff; /* beyaz text */
+    font-size: 20px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 800; /* kalın ve güçlü */
+    margin: 0;
+    line-height: 1.2;
+    color: rgb(118, 173, 218);
+    position: absolute;
+    top: 25px;
+}
+
+.entercontenttexttwo {
+    color: #ffffff; /* beyaz text */
+    font-size: 20px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 800; /* kalın ve güçlü */
+    margin: 0;
+    color: lightgray;
+    position: absolute;
+    top: 55px;
+}
+
+.entercontentlogo {
+    position: absolute;
+    height: 175px;
+    right: -5px;
+}
