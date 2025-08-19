@@ -2,9 +2,9 @@
     position: absolute;
     left: 25px;
     right: 25px;
-    top: 165px;
+    top: 5px;
     background: #1e2029; /* soft gradient yeşil tonları */
-    padding: 2px 20px; /* üst-alt ve sağ-sol padding */
+    padding: 2px 5px; /* üst-alt ve sağ-sol padding */
     border-radius: 4px; /* daha yuvarlatılmış köşeler */
     border: 0px solid rgb(33, 130, 209); /* koyu yeşil border */
     display: flex;
@@ -12,6 +12,8 @@
     justify-content: space-between;
     min-height: 75px; /* yeterli yükseklik */
 }
+
+
 
 .totalvalue {
     position: absolute;

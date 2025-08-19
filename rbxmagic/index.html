@@ -18,31 +18,52 @@
     <link rel="stylesheet" href="/responsive/responsive.css">
     <link rel="stylesheet" href="/cssfiles/gamestatics.css">
     <link rel="stylesheet" href="/cssfiles/screenbottom.css">
+    <link rel="stylesheet" href="/cssfiles/loading.css">
+    <link rel="stylesheet" href="/cfinsideui/cfui.css">
+
 
 </head>
 <body>
     <div class="header" id="header">
         <img src="/images/logo.png" alt="BloxRisk Logo" class="logo" id="logo">
+        <img src="/images/smallestlogo.png" alt="smalllogo" class="smalllogo" id="smalllogo">
         <button class="register" id="register">Register</button>
         <button class="login" id="login">Login</button>
     </div>
     <div class="chat" id="chat">
-        <div class="mainchat" id="mainchat">
-            <p class="mainchattext" id="mainchattext">Chat</p>
-            <img src="/images/bluemans.png" alt="Blue" class="mainchatimage" id="mainchatimage">
-            <h1 class="onlinecount" id="onlinecount">0</h1>
-        </div>
+        <input type="text" id="chatinput" class="chatinput" placeholder=" Enter Message..." />
+        <button class="sendbtn" id="sendbtn" value="chatinput">
+            Send
+        </button>
+
+
+
+    <div class="mainchat" id="mainchat">
+        <p class="mainchattext" id="mainchattext">Chat</p>
+        <img src="/images/bluemans.png" alt="Blue" class="mainchatimage" id="mainchatimage">
+        <h1 class="onlinecount" id="onlinecount">0</h1>
+
+        <!-- Mesajlar için container -->
+        <div class="messages" id="messages"></div>
+
+        
+        
     </div>
+</div>
 
 
-
+<div class="loading" id="loading">
+    <img src="/images/logo.png" class="loadinglogo" id="loadinglogo">
+</div>
+<div class="cfcontainer" id="cfcontainer">
+        
+    </div>
     <div class="container" id="container">
     <div class="entercontent" id="entercontent">
         <img src="/images/discords.png" alt="Discord Logo" class="entercontentlogo" id="entercontentlogo">
         <p class="entercontenttext" id="entercontenttext">Join Our Community Server</p>
         <p class="entercontenttexttwo" id="entercontenttexttwo">Join Our Discord Server for Giveaways, Community Interaction and much more</p>
     </div>
-
 
     <!--screenbutton for mobile-->
     <div class="screenbottomformobile" id="screenbottomformobile">
@@ -84,5 +105,6 @@
     </div>
 </div>
 <script src="/jsfiles/javascript.js"></script>
+<script src="/jsfiles/loading.js"></script>
 </body>
 </html>

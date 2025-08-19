@@ -29,16 +29,17 @@
     display: none;
 }
 .container {
-    width: calc(100% - 50px); /* ekran genişliği - sidebar */
+    width: calc(100% - 10px); /* ekran genişliği - sidebar */
     box-sizing: border-box;
     border: #fff 0px solid;
     top: 65.5px;
     position: relative;
-    left: 25px;
+    left: 5px;
     height: 1500px;
 }
 
 }
+
 
 
 @media (min-width: 1305px) {

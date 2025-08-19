@@ -12,7 +12,7 @@
     position: absolute;
     left: 25px;
     right: 25px;
-    top: 50px;
+    top: 40px;
     background: linear-gradient(135deg, rgba(33, 130, 209, 0.356), rgba(33, 130, 209, 0.233)); /* soft gradient yeşil tonları */
     padding: 2px 20px; /* üst-alt ve sağ-sol padding */
     border-radius: 12px; /* daha yuvarlatılmış köşeler */

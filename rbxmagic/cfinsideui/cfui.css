@@ -1,0 +1,22 @@
+.cfcontainer {
+    width: calc(100% - 378px); /* sidebar genişliği kadar çıkar */
+    left: 353px;               /* sidebarın hemen yanında başla */
+    box-sizing: border-box;
+    border: #fff 1px solid;
+    top: 355px;
+    position: absolute;
+    height: 600px;
+}
+
+@media (max-width: 1305px) {
+.cfcontainer {
+    width: calc(100% - 60px); /* ekran genişliği - sidebar */
+    box-sizing: border-box;
+    border: #fff 1px solid;
+    top: 370px;
+    position: absolute;
+    left: 30px;
+    height: 1500px;
+}
+
+}

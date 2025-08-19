@@ -50,3 +50,62 @@
     font-weight: bolder;
     font-size: large;
 }
+
+
+.chatinput {
+    position: absolute;
+    color: white;
+    background-color: #1a1d20;
+    border: rgba(211, 211, 211, 0.15) 2.5px solid;
+    bottom: 115px;
+    width: calc(100% - 24px);
+    left: 12px;
+    height: 35px;
+    border-radius: 7px;
+    display: flex;
+    font-family: 'Nunito', sans-serif;
+    font-size: smaller;
+    font-weight: 1000;
+
+    /* Border geçiş animasyonu */
+    transition: border-color 0.3s ease;
+}
+
+.chatinput input {
+    font-weight: 10;
+}
+
+.chatinput {
+    font-weight: 1000;
+}
+
+
+/* Hover olunca border mavi olacak */
+.chatinput:hover {
+    border-color: rgba(33, 130, 209, 0.8);
+}
+
+/* Focus olunca border mavi kalacak */
+.chatinput:focus {
+    border-color: rgba(33, 130, 209, 0.8);
+    outline: none; /* mavi outline yerine sadece border */
+}
+
+.sendbtn {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    background-color: lightgray;
+    border: rgba(211, 211, 211, 0.5) 0px solid;
+    bottom: 80px;
+    width: calc(100% - 16px);
+    left: 12px;
+    height: 25px;
+    border-radius: 7px;
+    display: flex;
+    font-family: 'Nunito', sans-serif;
+    font-size: larger;
+    font-weight: 1000;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

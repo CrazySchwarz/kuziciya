@@ -41,12 +41,41 @@ body {
     padding: 0px;
 }
 
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* scrollbar arka planını da gizler */
+}
+
 .logo {
     height: 62.5px;
     position: fixed;
     top: 4px;
     left: 12px;
 }
+
+@media (max-width: 1305px) {
+.logo {
+    display: none;
+}
+
+.smalllogo {
+    height: 50px;
+    position: fixed;
+    top: 15px;
+    left: 25px;}
+
+}
+
+@media (min-width: 1305px) {
+.logo {
+    display: block;
+}
+.smalllogo {
+    display: none;
+}
+
+}
+
 
 .header {
     background-color: #1a1d21;
@@ -106,7 +135,7 @@ body {
     position: absolute;
     left: 25px;
     right: 25px;
-    top: calc(50px + 115px + 15px);
+    top: calc(50px + 95px + 15px);
     background: #1e2029;
     border: 3px solid rgba(64, 68, 71, 0.411);
     border-radius: 7px;
