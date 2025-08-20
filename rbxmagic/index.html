@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="/cssfiles/screenbottom.css">
     <link rel="stylesheet" href="/cssfiles/loading.css">
     <link rel="stylesheet" href="/cfinsideui/cfui.css">
+    <link rel="stylesheet" href="/cfinsideui/cfcontainer.css">
+    <link rel="stylesheet" href="/cfinsideui/cfsidesdecide.css">
 
 
 </head>
@@ -56,7 +58,34 @@
     <img src="/images/logo.png" class="loadinglogo" id="loadinglogo">
 </div>
 <div class="cfcontainer" id="cfcontainer">
-        
+    <div class="cfinsidecontainer" id="cfinsidecontainer">
+        <img src="/images/coinstack.png" alt="CF Inside Logo" class="coinstack" id="coinstack">
+        <p class="coinfliptext" id="coinfliptext">COINFLIP</p>
+        <p class="coinflipsidetext" id="coinflipsidetext">Play against your Friends or Bots</p>
+        <input 
+    type="number" 
+    id="betamount" 
+    class="betinput" 
+    placeholder="Enter Bet Amount..." 
+    min="1"      
+/>
+
+<button class="createcoinflipbutton" id="createcoinflipbutton">
+    CREATE COINFLIP
+</button>
+<div class="coinflpsoldan">
+  <button class="heads" id="heads">
+    <img src="/cfsides/heds.webp" alt="Heds" class="sideimage" id="hedsimage">
+  </button>
+
+  <button class="tails" id="tails">
+    <img src="/cfsides/teyls.webp" alt="Teyls" class="sideimage" id="teylsimage">
+  </button>
+</div>
+
+    </div>
+
+
     </div>
     <div class="container" id="container">
     <div class="entercontent" id="entercontent">

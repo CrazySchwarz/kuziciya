@@ -1,0 +1,82 @@
+.cfinsidecontainer {
+    position: relative;
+    left: 0px;
+    height: 90px;
+    width: 100%;
+    border: blue 0px solid;
+    z-index: 100;
+}
+
+.coinstack {
+    position: absolute;
+    height: 40px;
+}
+
+.coinfliptext {
+    position: absolute;
+    color: white;
+    left: 50px;
+    top: -17.5px;
+    font-family: "Nunito", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.coinflipsidetext {
+    position: absolute;
+    color: lightskyblue;
+    font-family: "Nunito", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    left: 165px;
+    top: -3px;
+}
+
+.betinput {
+    position: absolute;
+    font-family: "Nunito", sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    right: 210px;
+    top: 10px;   
+    height: 40px; 
+    width: 150px;
+    background-color: rgba(36, 35, 35, 0.308);
+    border-radius: 7px;
+    border: rgba(211, 211, 211, 0.11) 2px solid;
+    color: lightgreen;
+}
+
+.betinput::placeholder {
+    color: lightgray;   /* placeholder rengini beyaz yapar */
+    opacity: 1;     /* bazı tarayıcılarda renk soluk görünmesin diye */
+    font-weight: 600;
+}
+
+
+.createcoinflipbutton {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    padding: 10px 10px;
+    background-color: rgb(44, 65, 185);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 17.5px;
+    cursor: pointer;
+    font-family: "Nunito", sans-serif;
+    border-radius: 4.5px;
+    transition: all 0.25s ease;
+    border: rgba(211, 211, 211, 0.178) 2px solid;
+    cursor: pointer;
+}
+
+
+
+
+
+@media (max-width: 1305px) {
+.coinflipsidetext {
+    display: none;
+}
+}

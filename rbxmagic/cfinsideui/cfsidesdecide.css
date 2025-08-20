@@ -1,0 +1,82 @@
+.cfinsidecontainer {
+    position: relative; /* absolute child'lar buna göre konumlanır */
+}
+
+.coinflpsoldan {
+    position: absolute;
+    right: 390px;   /* sol mesafe */
+    bottom: 20px; /* alt mesafe */
+    display: flex;
+    gap: 10px;    /* heads ve tails arası boşluk */
+    top: -7.5px;
+}
+
+.coinflpsoldan button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.coinflpsoldan img {
+    height: 40px;   /* istediğin boyut */
+    width: auto;
+    display: block;
+    transition: transform 0.25s ease;
+}
+
+
+@media (max-width: 700px) {
+    .coinflpsoldan {
+        left: 170px; /* daha dar ekranlarda sağa kaydır */
+        bottom: 45px; /* alt mesafeyi azalt */
+    }
+
+    .coinflpsoldan img {
+    height: 30px;   /* istediğin boyut */
+    width: auto;
+    display: block;
+    transition: transform 0.25s ease;
+}
+
+.betinput {
+    position: absolute;
+    font-family: "Nunito", sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    left: 0px;
+    top: 50px;   
+    height: 40px; 
+    width: 100%;
+    background-color: rgba(36, 35, 35, 0.308);
+    border-radius: 7px;
+    border: rgba(211, 211, 211, 0.11) 2px solid;
+    color: lightgreen;
+}
+
+.createcoinflipbutton {
+    position: absolute;
+    left: 0px;
+    top: 105px;
+    padding: 10px 10px;
+    background-color: rgb(44, 65, 185);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 17.5px;
+    cursor: pointer;
+    font-family: "Nunito", sans-serif;
+    border-radius: 4.5px;
+    transition: all 0.25s ease;
+    border: rgba(211, 211, 211, 0.178) 2px solid;
+    cursor: pointer;
+    width: 101%;
+}
+
+
+}
+
+
+
+.coinflpsoldan img:hover {
+    transform: scale(1.1); /* hover efekti */
+}
